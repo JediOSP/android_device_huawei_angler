@@ -1,5 +1,5 @@
 #
-# Copyright 2015 The Android Open Source Project
+# Copyright 2015 The Jedi Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,5 +14,7 @@
 # limitations under the License.
 #
 
-add_lunch_combo aosp_angler-userdebug
-add_lunch_combo jedi_angler-userdebug
+# Build inline kernel
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_SOURCE := kernel/msm
+TARGET_KERNEL_CONFIG := angler_defconfig
