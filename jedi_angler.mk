@@ -20,6 +20,9 @@ include device/huawei/angler/JediBoardConfig.mk
 # Inherit AOSP device configuration
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
+# include vendor blobs
+$(call inherit-product-if-exists, vendor/huawei/angler/angler-vendor.mk)
+
 # Override product naming for Omni
 PRODUCT_NAME := jedi_angler
 PRODUCT_BRAND := Google
